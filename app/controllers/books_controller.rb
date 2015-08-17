@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
 
+  before_filter :authorize
+
   #get
   def index
     #render a list

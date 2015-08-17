@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   #sessions = login/logout
   get 'users/login' => 'sessions#login'
-  get 'users/login_confirmation' => 'sessions#confirmation'
+  post 'users/login_confirmation' => 'sessions#confirmation'
   get 'users/logout' => 'sessions/logout'
 
   #http verb - 'resource/route'=> mapped to controller methof
