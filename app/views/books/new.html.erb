@@ -1,2 +1,15 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<h4>Add Book to List </h4>
+
+<% form_for @book, url:{action:'books/create'}, html:{class: 'new_form'} do |f| %>
+
+Author: <%= f.text_field :author %>
+Title: <%= f.text_field :title %>
+Genre: <%= f.text_field :genre %>
+Description: <%= f.text_field :description %>
+Author: <%= f.text_field :author %>
+
+<%= f.submit 'Add Item' %>
+
+
+<% end %>
+<li><a href='books'>Back to List</a></li>

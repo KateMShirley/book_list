@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     if @user.save
       #thanks you're in!
       session[:user_id] = @user.id
+      redirect_to '/'
 
       #finding only books by currently users
       # Book.where(:user_id => session[:user_id].to_i)

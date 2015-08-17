@@ -8,6 +8,10 @@ class SessionsController < ApplicationController
 
   #post
   def confirmation
+    puts '-------------Users confirmation--------'
+    puts params
+    puts '-------------END Users confirmation--------'
+
     #show a user a message regarding login status
     @user = User.find_by_email(params[:email])
 
